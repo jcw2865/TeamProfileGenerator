@@ -10,12 +10,17 @@ function promptUser() {
             {
                 type: "input",
                 name: "manager",
-                message: "Welcome, manager. What is your name?"
+                message: "Welcome, manager. Please enter your name."
+            },
+            {
+                type: "input",
+                name: "managerEmail",
+                message: "Please enter your email."
             },
             {
                 type: "number",
                 name: "teamSize",
-                message: "How many employees do you have? Please enter only numbers."
+                message: "Please enter the number of employees you have. (Numbers only)"
             },
             // #####
             // QUESTIONS FOR EMPLOYEES
