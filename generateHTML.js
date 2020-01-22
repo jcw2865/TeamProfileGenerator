@@ -29,13 +29,13 @@ function generateHTML(managerResponse, employeeArray) {
         <title>Team Profile Generator</title>
         <style>
             body {
-                background-image: url(./Photos/Cool-Background.jpeg)
+                background-color: #e67e22;
             }
     
             .header {
                 padding: 60px;
                 text-align: center;
-                background: #1abc9c;
+                background: #2ecc71;
                 color: white;
                 font-size: 30px;
             }
@@ -51,7 +51,8 @@ function generateHTML(managerResponse, employeeArray) {
                 transition: 0.3s;
                 width: 40%;
                 float: left;
-                margin: 10px
+                margin: 10px;
+                background-color: #f1c40f;
             }
     
             .card:hover {
@@ -60,11 +61,10 @@ function generateHTML(managerResponse, employeeArray) {
     
             .container {
                 padding: 2px 16px;
-                background-image: url(./Photos/yellow-notebook.jpg);
             }
     
             h4 {
-                background-color: lightpink;
+                background-color: #1abc9c;
                 text-align: center;
                 padding-top: 10px;
                 padding-bottom: 10px;
@@ -96,8 +96,8 @@ function generateHTML(managerResponse, employeeArray) {
                     <p>${employee.getRole()}</p>
                 </h4>
                 <p><strong>ID: </strong>${employee.getId()}</p>
-                ${employee.getGhusername() ? `<p><strong>GitHub Username: ${employee.getGhusername()}</strong></p>` : ''}
-                ${employee.getSchool() ? `<p><strong>School: ${employee.getSchool()}</strong></p>` : ''}
+                ${employee.getGhusername() ? `<p><strong>GitHub Username: </strong>${employee.getGhusername()}</p>` : ''}
+                ${employee.getSchool() ? `<p><strong>School: </strong>${employee.getSchool()}</p>` : ''}
             </div>
         </div>
             `)}
