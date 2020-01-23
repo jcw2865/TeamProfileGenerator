@@ -1,51 +1,58 @@
 # TeamProfileGenerator
 Team Profile Generator
 
-The purpose of this project was to build a command line application that prompts the user for their favorite color and their GitHub username. The program would then take the user's input and produce a PDG with information from the user's GitHub, styled with their favorite color. The criteria for a successful program are below: 
+The purpose of this project was to build a command line interface that prompts the user (presumably a manager) for their information as well as information about their employees. The CLI would then take the user's provided information and generate an HTML document. The project user story is below.
 
-* The user is prompted to answer two questions: 1. "What is your favorite color?", 2. "What is your GitHub username?".
+```
+As a manager
+I want to generate a webpage that displays my team's basic info
+so that I have quick access to emails and GitHub profiles
+```
 
-* A PDF is generated that displays the user's GitHub profile picture, name, location, bio, number of public repositories, number of followers, number of other GitHub users they're following, and number of GitHub stars.
+ The criteria for a successful program are below: 
 
-* The PDF should be styled according to the user's input for the question, "What is your favorite color?". 
+* Each team member should have the following properties: Name, Role, ID, Role-Specific Property (i.e. GitHub username, school, phone number).
+
+* Following the user's input, an HTML document is created displaying the provided information. 
+
+* The program passes all provided tests. 
 
 ## Getting Started
 
-The deployed project should look like this.
+The deployed project should look like this. Click the image to see a video of the deployed project.
 
-![DeployedProject](deployed.gif)
+[![Deployed Project](TeamProfGenSS.png)](https://youtu.be/2oFZDTQwhzE)
 
-Below is the link to the project repository followed by the link to the PDF generated for me. 
 
-https://github.com/jcw2865/homework-9
+Below is the link to the project repository followed by the link to the video of the CLI process. 
 
-https://drive.google.com/drive/u/0/folders/1zbrokYYLcrQsrTtnE-xKfYFROUL9LEVE
+https://github.com/jcw2865/TeamProfileGenerator
+
+https://youtu.be/2oFZDTQwhzE
 
 ### Development
 
-Below are the steps I took to create the project as it is so far. In creating this project, I started over numerous times after discovering I had began incorrectly. So, to be more precise, below are the steps I took in my most recent attempt to create the project. 
+Below are the steps I took to create the program as it is so far. The development of this program was trickier than previous programs because the intent was to use Test-Driven-Development. What was tricky about that was trying to develop the program as I knew it should have been, while also trying to incorporate a new aspect which was developing tests simultaneously (if not the other way around).  
 
-1. Created index.html, style.css, and index.js. 
+1. Created the initial files (JS files, HTML files, test files). 
 
 2. Downloaded all dependecies using npm. 
 
 3. Created user prompts with inquirer.
 
-4. Took the input from the user prompts and used them in axios calls to GitHub. 
+4. Created the desired HTML structure and style.
 
-5. Consolidated GitHub data.
+5. Copied and pasted the HTML structure and style into a "generateHTML" function to be called later. 
 
-6. Created the template I wanted to use for my HTML document (which would eventually be displayed via PDF).
-
-7. Created the function that would send data to the HTML document, then to PDF format. 
+6. Created "calls" for the user input to be plugged into the generateHTML function. 
 
 ## Testing
 
-The majority of the time I spent working on this project was spent trying to get the user's GitHub data to display. Creating Axios requests was similar to AJAX requests, so I understood the logic fairly quickly. In order to display the user's GitHub data, I had to place console logs at numerous points throughout the program to determine where const/var/let declarations ended due to scoping. 
+The tests for this program were provided. The intent of the project was to reach a specific end-state (the HTML document) using the provided tests as a guideline throughout development. While some of the provided tests were successful, others were not. The end-state was reached and an HTML document was created while meeting all of the criteria, but not all of the tests passed, which leads me to believe there are probably better ways to develop and execute this program.
 
 ## Deployment
 
-This program can be deployed using most internet browsers via the links in the "Getting Started" section. 
+This program can be viewed and deployed using most internet browsers via the links in the "Getting Started" section. 
 
 ## Built With
 
@@ -53,11 +60,8 @@ This program can be deployed using most internet browsers via the links in the "
 * [MDN](https://developer.mozilla.org/en-US/) - Used as a reference tool.
 * [GoogleChrome](https://www.google.com/chrome/) - Used for inspector tool and validating the program during development. 
 * [NodePackageManager](https://www.npmjs.com/) - Used to install node modules/dependencies
-* [Axios](https://www.npmjs.com/package/axios) - Used as a promise based HTTP client for the browser and node.js.
-* [Util](https://www.npmjs.com/package/util) - This implements the Node.js util module for environments that do not have it, like browsers.
 * [Inquirer](https://www.npmjs.com/package/inquirer) - A collection of common interactive command line user interfaces.
-* [html-pdf](https://www.npmjs.com/package/html-pdf) - HTML to PDF converter that uses phantomjs.
-* [ImgFlip](https://imgflip.com/gif-maker) - Used to create the GIF found in the "Getting Started" section.
+* [YouTube](https://youtube.com) - Used to publish the video of the CLI which can be found in the "Getting Started" section. 
 <!-- ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us. -->
@@ -77,4 +81,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * The advisors, instructors, and TAs at the Coding Bootcamp at the University of Texas at Austin
 * Tutoring staff at Trilogy
 * Fellow classmates at the Coding Bootcamp at UT-Austin
-* Friends in the industry
+* Friends in the industry (Brent and Pills, thank you for your timely and tremendous help)
