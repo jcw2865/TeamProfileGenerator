@@ -29,13 +29,13 @@ function generateHTML(managerResponse, employeeArray) {
         <title>Team Profile Generator</title>
         <style>
             body {
-                background-color: #e67e22;
+                background-color: #2c3e50;
             }
     
             .header {
                 padding: 60px;
                 text-align: center;
-                background: #2ecc71;
+                background: #1abc9c;
                 color: white;
                 font-size: 30px;
             }
